@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Widget</class>
- <widget class="QWidget" name="Widget">
-  <property name="enabled">
-   <bool>true</bool>
-  </property>
+ <class>Register</class>
+ <widget class="QWidget" name="Register">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -12,12 +9,6 @@
     <width>280</width>
     <height>210</height>
    </rect>
-  </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
@@ -32,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MyQQ</string>
+   <string>注册</string>
   </property>
   <widget class="QWidget" name="widget_3" native="true">
    <property name="geometry">
@@ -45,59 +36,64 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="laTitle">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string>MyQQ</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QWidget" name="widget" native="true">
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLabel" name="laAccount">
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_5">
          <property name="text">
-          <string>账号</string>
+          <string>确认密码</string>
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QLineEdit" name="leAccount"/>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>密码</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>用户名</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="leAccount">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="lePassword1">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="lePassword2">
+         <property name="echoMode">
+          <enum>QLineEdit::Normal</enum>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
     </item>
     <item>
      <widget class="QWidget" name="widget_2" native="true">
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLabel" name="laPassword">
-         <property name="text">
-          <string>密码</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lePassword">
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QWidget" name="widget_4" native="true">
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <spacer name="horizontalSpacer_2">
+        <spacer name="horizontalSpacer">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -117,7 +113,7 @@
         </widget>
        </item>
        <item>
-        <spacer name="horizontalSpacer">
+        <spacer name="horizontalSpacer_2">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -130,9 +126,9 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pbLogin">
+        <widget class="QPushButton" name="pbBack">
          <property name="text">
-          <string>登陆</string>
+          <string>返回</string>
          </property>
         </widget>
        </item>
@@ -156,10 +152,13 @@
   </widget>
  </widget>
  <tabstops>
+  <tabstop>lePassword2</tabstop>
+  <tabstop>lePassword1</tabstop>
   <tabstop>leAccount</tabstop>
-  <tabstop>lePassword</tabstop>
-  <tabstop>pbLogin</tabstop>
   <tabstop>pbRegister</tabstop>
+  <tabstop>pbBack</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+  <tabstop>lineEdit_3</tabstop>
  </tabstops>
  <resources/>
  <connections/>
