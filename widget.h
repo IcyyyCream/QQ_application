@@ -6,7 +6,6 @@
 #include <QTcpSocket>
 #include <QNetworkInterface>
 
-#include "register.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }

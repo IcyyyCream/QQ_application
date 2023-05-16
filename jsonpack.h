@@ -10,9 +10,8 @@ public:
     explicit JsonPack();
     ~JsonPack();
 
-    QJsonObject packRegister(const QString &, const QString &);
+    static QJsonObject packRegister(const QString &, const QString &);
 private:
-    QJsonObject js;
 };
 
 #endif // JSONPACK_H

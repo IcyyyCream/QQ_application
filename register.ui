@@ -60,7 +60,7 @@
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QLineEdit" name="leAccount">
+        <widget class="QLineEdit" name="lePassword2">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -80,7 +80,7 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QLineEdit" name="lePassword2">
+        <widget class="QLineEdit" name="leAccount">
          <property name="echoMode">
           <enum>QLineEdit::Normal</enum>
          </property>
@@ -152,13 +152,11 @@
   </widget>
  </widget>
  <tabstops>
-  <tabstop>lePassword2</tabstop>
-  <tabstop>lePassword1</tabstop>
   <tabstop>leAccount</tabstop>
+  <tabstop>lePassword1</tabstop>
+  <tabstop>lePassword2</tabstop>
   <tabstop>pbRegister</tabstop>
   <tabstop>pbBack</tabstop>
-  <tabstop>lineEdit_2</tabstop>
-  <tabstop>lineEdit_3</tabstop>
  </tabstops>
  <resources/>
  <connections/>

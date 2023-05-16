@@ -25,6 +25,7 @@ signals:
 
 private:
     Ui::Register *ui;
+    QTcpSocket *tcpSocket;
 };
 
 #endif // REGISTER_H

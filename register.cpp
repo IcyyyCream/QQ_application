@@ -3,20 +3,27 @@
 
 #include <QMessageBox>
 #include <QDebug>
-#include <QString>
+#include <string>
+
+const QString ip = "114.115.166.37";
+const int port = 8000;
 
 Register::Register(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Register)
 {
     ui->setupUi(this);
+    tcpSocket = new QTcpSocket(this);
+    tcpSocket->connectToHost(ip, port);
     connect(ui->pbBack, &QPushButton::clicked, this, &Register::registerBack);
     connect(ui->pbRegister, &QPushButton::clicked, this, &Register::sentRegInfo);
+
 }
 
 Register::~Register()
 {
     delete ui;
+    tcpSocket->abort();
 }
 
 void Register::sentRegInfo()
@@ -37,8 +44,11 @@ void Register::sentRegInfo()
     {
         QString usr = ui->leAccount->text();
         QString password = ui->lePassword1->text();
-        qDebug() <<  "用户名" << usr;
-        qDebug() <<  "密码" << password;
+
+        std::string message = QString("{\"cmd\": \"register\", \"user\": \"%1\", \"password\": \"%2\"}").arg(usr).arg(password).toStdString();
+        // qDebug().noquote() << message.c_str();
+        tcpSocket->write(message.c_str());
+        tcpSocket->flush();
     }
 
 }
